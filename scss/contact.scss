@@ -1,0 +1,80 @@
+@import "settings";
+@import "header-footer";
+
+main {
+	background-color: $bgc;
+}
+
+.wrap{
+	padding: 60px 0;
+}
+
+section#contact {
+	width: 100%;
+	@extend %flex;
+	justify-content: space-between;
+	padding-bottom: 40px;
+
+	&>.contact_info {
+		width: 40%;
+
+		&>h2 {
+			padding-bottom: 40px;
+			font-family: Montserrat;
+			font-size: 30px;
+			font-weight: 500;
+			color: $cb;
+		}
+
+		&>p {
+			padding-bottom: 20px;
+		}
+
+		.strong {
+			font-weight: 700;
+			color: $cb;
+		}
+	}
+
+	&>form {
+		width: 60%;
+		@extend %flex;
+		justify-content: space-between;
+
+		input[type="name"], input[type="email"] {
+			width: 45%;
+		}
+
+		input[type="text"] {
+			width: 100%;
+		}
+
+		textarea {
+			width: 100%;
+		}
+
+		input[type="name"], input[type="email"], input[type="text"], textarea {
+			padding: 5px 10px;
+			margin-bottom: 15px;
+			border: none;
+			outline: none;
+		}
+
+		button {
+			padding: 0 20px;
+			background-color: $cg;
+			color: $cw;
+			border: none;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+	}
+}
+
+section#location {
+	width: 100%;
+
+	iframe {
+		width: 100%;
+	}
+}

@@ -1,0 +1,47 @@
+@import "fonts";
+
+
+$color:#787878; 
+$cw: #fff;
+$cb:#000;
+$cg: #10c9c3;
+$bgc: #f6f6f6;
+$bg_item1: #838383;
+$bg_item2: #dddddd;
+$foot-bg: #141414;
+
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	color: $color;
+	line-height: 1.4;
+}
+
+main {
+	width: 100%;
+}
+
+a {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	color: $color;
+	text-decoration: none;
+}
+
+.wrap {
+	width: 90%;
+	margin: 0 auto;
+}
+
+%flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+%h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	font-weight: 500;
+	color: $cb;
+}

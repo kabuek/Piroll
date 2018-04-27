@@ -1,0 +1,120 @@
+@import "settings";
+@import "header-footer";
+
+section#introduction {
+		width: 100%;
+
+		&>.name {
+			width: 100%;
+			padding: 50px 0;
+			background-color: #3e3e3e;
+			text-align: center;
+
+			&>h1 {
+				padding-bottom: 40px;
+				font-family: Montserrat;
+				font-size: 38px;
+				font-weight: 500;
+				color: $cw;
+			}
+
+			&>p {
+				max-width: 500px;
+				margin: 0 auto;
+				font-size: 18px;
+				color: $cw;
+			}
+		}
+
+		&>.reviews {
+			@extend %flex;
+			justify-content: space-around;
+			padding: 60px 0;
+			width: 100%;
+			background-color: $cg;
+
+			&>p {
+				display: grid;
+				grid-template-columns: auto auto;
+				font-size: 30px;
+				color: $cw;
+
+				&>span {
+					margin-left: 15px;
+					font-size: 15px;
+				}
+
+			}
+		}
+	}
+
+section#info {
+		@extend %flex;
+		width: 100%;
+
+		&>.foto {
+			width: 50%;
+		}
+
+		&>.about_me {
+			width: 50%;
+			background-color: $bgc;
+
+			&>.about_me__pair {
+				width: 80%;
+				margin: 0  auto;
+				padding: 80px 0;
+
+				&>h2 {
+					font-family: Montserrat;
+					font-size: 30px;
+					font-weight: 500;
+					color: $cb;
+				}
+
+				&>p {
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}
+
+section#letter {
+	width: 100%;
+
+	&>.letter_pair {
+		width: 80%;
+		margin: 0 auto;
+		padding: 80px 0;
+		text-align: center;
+
+		&>h2 {
+			padding-bottom: 20px;
+			font-family: Montserrat;
+			font-size: 30px;
+			font-weight: 500;
+			color: $cb;
+		}
+
+		&>p {
+			margin: 0 auto;
+			max-width: 500px;
+			padding-bottom: 40px;
+		}
+
+		&>a {
+			display: inline-block;
+			padding: 22px 52px;
+			background-color: $cg;
+			font-family: Montserrat;
+			font-weight: 500;
+			color: $cw;
+			text-transform: uppercase;
+			transition: 0.3s;
+		}
+
+		&>a:hover {
+			background-color: darken($cg, 7%);
+		}
+	}
+}

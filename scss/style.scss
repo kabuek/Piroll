@@ -1,0 +1,81 @@
+@import "settings";
+@import "header-footer";
+
+main {
+	&>.content {
+		width: 100%;
+		background-color: $bgc;
+
+		&>.wrap {
+			padding: 50px 0;
+			text-align: center;
+
+			&>h1 {
+				@extend %h1;
+				padding-bottom: 20px;
+			}
+
+			&>p {
+				margin: 0 auto;
+				max-width: 500px;
+			}
+		}
+
+		&>.catalog {
+			width: 100%;
+			@extend %flex;
+
+			&>.catalog_item {
+				position: relative;
+				width: 25%;
+				background-color: $bg_item1;
+				text-align: center;
+
+				&>img {
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&>a {
+					z-index: 1;
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					padding: 10px;
+					font-size: 40px;
+					color: $cw;
+					opacity: 0;
+					transition: 0.3s;
+				}
+			}
+
+			&>.catalog_item:after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: rgba(16, 201, 195, 0);
+				transition: 0.3s;
+			}
+
+			&>.catalog_item:hover:after {
+				background-color: rgba(16, 201, 195, 0.6);
+			}
+
+			&>.catalog_item:hover {
+				&>a {
+					opacity: 1;
+				}
+			}
+
+			&>.light-bg {
+				background-color: $bg_item2;
+			}
+		}
+	}
+}
